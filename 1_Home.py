@@ -1,15 +1,10 @@
 import pandas as pd
 import streamlit as st
-import altair as alt
-import plotly.figure_factory as ff
 import plotly.express as px
 
 
 
 
-
-
-import pandas as pd
 
 
 path = '/home/rafael/SP_Database/'
