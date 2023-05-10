@@ -5,12 +5,9 @@ import plotly.express as px
 
 
 
+path = '/home/rafael/SP_Database/CoSPAD_repo/'
 
-
-path = '/home/rafael/SP_Database/'
-
-df = pd.read_csv(path+'Klipp_2023_Database_26042023.csv')
-df['Specie'] = [i.split()[0]+' '+i.split()[1] for i in df.Host]
+df = pd.read_csv(path+'CoSPAD_V3.csv')#.set_index('id')
 
 
 st.set_page_config(

@@ -1,20 +1,15 @@
 
 
 import pandas as pd
-import plotly.express as px
 import streamlit as st
-import numpy as np
 import altair as alt
 from pandas.api.types import is_string_dtype
 
 
 
-path = '/home/rafael/SP_Database/'
+path = '/home/rafael/SP_Database/CoSPAD_repo/'
 
-df = pd.read_csv(path+'Klipp_2023_Database_24042023.csv')#.set_index('id')
-
-df['Specie'] = [i.split()[0]+' '+i.split()[1] for i in df.Host]
-
+df = pd.read_csv(path+'CoSPAD_V3.csv')#.set_index('id')
 
 
 col1, col2 = st.columns([1, 1])
