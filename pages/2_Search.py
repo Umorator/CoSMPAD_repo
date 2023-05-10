@@ -28,7 +28,7 @@ def plot(df,column):
         #df = df[df['UniprotKB/NCBI_POI'] != 'AAA22227.1'] #Watanabe
         df.enzyme_activity = df.enzyme_activity.astype(float)
         c = alt.Chart(df).mark_bar().transform_calculate(
-            url='https://www.uniprot.org/uniprotkb?query=' + alt.datum['UniprotKB/NCBI_SP']
+            url='https://www.uniprot.org/uniprotkb?query=' + alt.datum['UniprotKB_SP']
         ).encode(
             alt.X('SP name:N',sort='-y',title='SP name'),alt.Y('enzyme_activity:Q', title='Enzyme Activity ('+df.Units.unique()+')'),color='Promoter:N',
             href='url:N',tooltip=('SP name:N','Promoter:N','sp_seq:N')
