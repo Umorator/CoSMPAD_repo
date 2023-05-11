@@ -17,14 +17,14 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.title('CoSPAD: A Comparative Secretory Preprotein Activity Database')
+st.title('CoMSPAD: A Comparative Microbial Secretory Preprotein Activity Database')
 
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
 col2.image("cospad_abstract.jpg")
 
 st.title("About")
-st.write("CoSPAD encompasses <N> types of experimental information found in <N> proteins by using different signal peptides which aims to serve as a reference for the recombinant protein production community, providing a simple interface for the extraction of data related to the expression of a target protein.")
+st.write("CoMSPAD encompasses <N> types of experimental information found in <N> proteins by using different signal peptides which aims to serve as a reference for the recombinant protein production community, providing a simple interface for the extraction of data related to the expression of a target protein.")
 
 
 a = pd.DataFrame(df.Specie.value_counts()).reset_index()
