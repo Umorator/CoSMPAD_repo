@@ -7,9 +7,9 @@ from pandas.api.types import is_string_dtype
 
 
 
-path = '/home/rafael/SP_Database/CoSPAD_repo/'
+#path = '/home/rafael/SP_Database/CoSPAD_repo/'
 
-df = pd.read_csv(path+'CoSPAD_V3.csv')#.set_index('id')
+df = pd.read_csv('CoSPAD_V3.csv')#.set_index('id')
 
 
 col1, col2 = st.columns([1, 1])

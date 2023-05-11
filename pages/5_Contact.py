@@ -23,7 +23,7 @@ url = 'https://rumo.biologie.hu-berlin.de/tbp/index.php/en//'
 
 
     
-st.markdown('<style>' + open('/home/rafael/SP_Database/icon.css').read() + '</style>', unsafe_allow_html=True)
+st.markdown('<style>' + open('icon.css').read() + '</style>', unsafe_allow_html=True)
 
 col1, col2, col3, col4 = st.columns([1, 0.5, 0.5, 1])
 
