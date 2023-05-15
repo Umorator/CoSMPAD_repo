@@ -30,7 +30,7 @@ def plot(df,column):
         c = alt.Chart(df).mark_bar().transform_calculate(
             url='https://www.uniprot.org/uniprotkb?query=' + alt.datum['UniprotKB_SP']
         ).encode(
-            alt.X('SP name:N',sort='-y',title='SP name'),alt.Y('enzyme_activity:Q', title='Enzyme Activity ('+df.Units.unique()+')'),color='Promoter:N',
+            alt.X('SP name:N',sort='-y',title='SP name'),alt.Y('enzyme_activity:Q', title='Enzyme Activity ('+df.Units.unique()+')'),color='SP type:N',
             href='url:N',tooltip=('SP name:N','Promoter:N','sp_seq:N')
         )
 
