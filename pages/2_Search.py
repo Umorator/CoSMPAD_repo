@@ -44,7 +44,7 @@ def plot(df,column):
 
 def filter_dataframe(df):
     modification_container = st.container()
-    list_filters = ['Specie','Host','Protein name','Promoter', 'SP name', 'Reference']
+    list_filters = ['Species','Host','Protein name','Promoter', 'SP name', 'Reference']
 
     with modification_container:
         to_filter_columns = st.multiselect("Filter dataframe on", list_filters,key='filters')
