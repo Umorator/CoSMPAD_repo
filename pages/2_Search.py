@@ -23,6 +23,7 @@ df.head()
 
 
 def plot(df,column):
+    order= ['SP(Sec/SPI)', 'TAT(Tat/SPI)', 'LIPO(Sec/SPII)','OTHER']
     if st.button('Display Figure',key=f"r {df[column].unique()}"):
         df = df[df.enzyme_activity != 'NR']
         #df = df[df['UniprotKB/NCBI_POI'] != 'AAA22227.1'] #Watanabe
@@ -30,7 +31,10 @@ def plot(df,column):
         c = alt.Chart(df).mark_bar().transform_calculate(
             url='https://www.uniprot.org/uniprotkb?query=' + alt.datum['UniprotKB_SP']
         ).encode(
-            alt.X('SP name:N',sort='-y',title='SP name'),alt.Y('enzyme_activity:Q', title='Enzyme Activity ('+df.Units.unique()+')'),color='SP type:N',
+            alt.X('SP name:N',sort='-y',title='SP name'),
+            alt.Y('enzyme_activity:Q', title='Enzyme Activity ('+df.Units.unique()+')'),
+            alt.Color('SP type:N',scale={"scheme": "dark2"},sort=order),
+            order="order:Q",
             href='url:N',tooltip=('SP name:N','Promoter:N','sp_seq:N')
         )
 
