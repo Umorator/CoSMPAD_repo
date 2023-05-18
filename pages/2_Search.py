@@ -26,7 +26,6 @@ def plot(df,column):
     order= ['SP(Sec/SPI)', 'TAT(Tat/SPI)', 'LIPO(Sec/SPII)','OTHER']
     if st.button('Display Figure',key=f"r {df[column].unique()}"):
         df = df[df.enzyme_activity != 'NR']
-        #df = df[df['UniprotKB/NCBI_POI'] != 'AAA22227.1'] #Watanabe
         df.enzyme_activity = df.enzyme_activity.astype(float)
         c = alt.Chart(df).mark_bar().transform_calculate(
             url='https://www.uniprot.org/uniprotkb?query=' + alt.datum['UniprotKB_SP']
