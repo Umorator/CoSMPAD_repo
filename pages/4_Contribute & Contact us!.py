@@ -1,21 +1,25 @@
 import streamlit as st
+import pandas as pd
+import pathlib
+import os
 import webbrowser
 
 
+st.title('Contribute to the Database')
+st.write('''
+For contributions,
+please click the Download Template button
+to download the data submission format and send 
+your data via email in the specified format. An example is given in the template. Further questions? Please contact us! (Email/Group page):
+''')
 
 
-#col1, col2, col3 = st.columns([1, 1, 1])
+df = pd.read_csv('Template.csv')
+data_as_csv= df.to_csv(index=False).encode("utf-8")
 
+st.download_button(label="Download Template",data=data_as_csv,file_name='Template.csv',mime='text/csv',)
 
-
-
-st.title('Contact information')
-#col2.image("/home/rafael/Pictures/theoretical bioph group-1.jpg",width=400)
-st.write(
-    """
-    For any questions related to this work, please contact Us (Email/Group page):
-    """
-)
+#contact --------------
 
 
 
