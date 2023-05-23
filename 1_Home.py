@@ -17,7 +17,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.title('CoMSPAD: A Comparative Microbial Secretory Preprotein Activity Database')
+#st.title('CoMSPAD: A Comparative Microbial Secretory Preprotein Activity Database')
 
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 

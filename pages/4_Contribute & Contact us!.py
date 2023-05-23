@@ -36,8 +36,9 @@ with col2:
     #st.write(" Email") 
 
 with col3:
-    if st.button("👩‍🏫"):
-        webbrowser.open_new_tab(url)
+    #if st.button("👩‍🏫"):
+        #webbrowser.open_new_tab(url)
+    st.markdown('<a href="https://rumo.biologie.hu-berlin.de/tbp/index.php/en//"> <i class="material-icons" style="font-size: 1.6em;">👩‍🏫</a>',unsafe_allow_html=True)
     #st.write("Our Group")
 
 
