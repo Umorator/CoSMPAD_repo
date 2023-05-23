@@ -32,7 +32,7 @@ st.markdown('<style>' + open('icon.css').read() + '</style>', unsafe_allow_html=
 col1, col2, col3, col4 = st.columns([1, 0.5, 0.5, 1])
 
 with col2:
-    st.markdown('<a href = "mailto: edda.klipp@rz.hu-berlin.de, morantor@hu-email.de"> <i class="material-icons" style="font-size: 2.2em;">email</a>',unsafe_allow_html=True)
+    st.markdown('<a href = "mailto: edda.klipp@rz.hu-berlin.de, morantor@hu-berlin.de"> <i class="material-icons" style="font-size: 2.2em;">email</a>',unsafe_allow_html=True)
     #st.write(" Email") 
 
 with col3:
