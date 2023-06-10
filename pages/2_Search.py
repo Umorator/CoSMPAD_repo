@@ -21,7 +21,6 @@ col1.title("Search")
 df.head()
 
 
-
 def plot(df,column):
     order= ['SP(Sec/SPI)', 'TAT(Tat/SPI)', 'LIPO(Sec/SPII)','OTHER']
     if st.button('Display Figure',key=f"r {df[column].unique()}"):
@@ -41,6 +40,8 @@ def plot(df,column):
 
 #change color for SP type
 
+
+@st.cache_data(experimental_allow_widgets=True)
 def filter_dataframe(df):
     modification_container = st.container()
     list_filters = ['Species','Host','Protein name','Promoter', 'SP name', 'Reference']
