@@ -9,7 +9,7 @@ from pandas.api.types import is_string_dtype
 
 #path = '/home/rafael/SP_Database/CoSPAD_repo/'
 
-df = pd.read_csv('CoSPAD_V3.csv')#.set_index('id')
+#df = pd.read_csv('CoSPAD_V3.csv')#.set_index('id')
 
 
 col1, col2 = st.columns([1, 1])
@@ -18,7 +18,7 @@ col1, col2 = st.columns([1, 1])
 col1.title("Search")
 #col2.image("/home/rafael/Pictures/theoretical bioph group-1.jpg",width=400)
 
-df.head()
+#df.head()
 
 
 def plot(df,column):
@@ -76,7 +76,7 @@ def filter_dataframe(df):
 
 
 
-st.dataframe(filter_dataframe(df))
+st.dataframe(filter_dataframe(pd.read_csv('CoSPAD_V3.csv')))
 
 
 
