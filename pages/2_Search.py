@@ -8,7 +8,6 @@ from pandas.api.types import is_string_dtype
 
 
 #path = '/home/rafael/SP_Database/CoSPAD_repo/'
-
 #df = pd.read_csv('CoSPAD_V3.csv')#.set_index('id')
 
 
@@ -17,8 +16,6 @@ col1, col2 = st.columns([1, 1])
 
 col1.title("Search")
 #col2.image("/home/rafael/Pictures/theoretical bioph group-1.jpg",width=400)
-
-#df.head()
 
 
 def plot(df,column):
@@ -38,7 +35,6 @@ def plot(df,column):
 
         st.altair_chart(c,use_container_width=True)
 
-#change color for SP type
 
 
 @st.cache_data(experimental_allow_widgets=True)
@@ -48,7 +44,6 @@ def filter_dataframe(df):
 
     with modification_container:
         to_filter_columns = st.multiselect("Filter dataframe on", list_filters,key='filters')
-        #if st.session_state.filters == [0:"host" 1:"protein_name"]:
         for column in to_filter_columns:
             left, right = st.columns((1, 20))
             left.write("↳")
@@ -57,18 +52,14 @@ def filter_dataframe(df):
                     f"Values for {column}",
                     df[column].unique())
                 df = df[df[column].isin(user_cat_input)]
-                #st.write(len(user_cat_input))
 
 
         st.subheader('Filter(s) Result:')
         if (len(df['Protein name'].unique())) == 1 and (len(df.Host.unique())) == 1:
-            #if 'Protein name' in to_filter_columns:
             plot(df,column)
 
         data_as_csv= df.to_csv(index=False).encode("utf-8")
-        st.download_button(label="Download data as CSV",data=data_as_csv,file_name='Klipp2023_result.csv',mime='text/csv',)
-
-
+        st.download_button(label="Download data as CSV",data=data_as_csv,file_name='CoSMPAD_Result.csv',mime='text/csv',)
 
            
                 
@@ -76,7 +67,7 @@ def filter_dataframe(df):
 
 
 
-st.dataframe(filter_dataframe(pd.read_csv('CoSPAD_V3.csv')))
+#st.dataframe(filter_dataframe(pd.read_csv('CoSPAD_V3.csv')))
 
-
+filter_dataframe(pd.read_csv('CoSPAD_V3.csv'))
 
