@@ -58,8 +58,11 @@ def filter_dataframe(df):
         if (len(df['Protein name'].unique())) == 1 and (len(df.Host.unique())) == 1:
             plot(df,column)
 
+        st.markdown('This file contains '+str(df.shape[0])+' SPs for '+ str(len(df['UniprotKB/NCBI_POI'].unique()))+' Protein(s) and '+
+                str(len(df['Promoter'].unique())) + ' Promoter(s)')
         data_as_csv= df.to_csv(index=False).encode("utf-8")
         st.download_button(label="Download data as CSV",data=data_as_csv,file_name='CoSMPAD_Result.csv',mime='text/csv',)
+
 
            
                 
