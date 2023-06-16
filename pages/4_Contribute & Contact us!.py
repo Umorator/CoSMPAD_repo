@@ -5,7 +5,12 @@ import os
 import webbrowser
 
 
-
+st.set_page_config(
+    page_title="Contribute to the Database",
+    page_icon="book",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 
 st.title('Contribute to the Database')

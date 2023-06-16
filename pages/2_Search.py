@@ -9,7 +9,12 @@ from pandas.api.types import is_string_dtype
 
 #path = '/home/rafael/SP_Database/CoSPAD_repo/'
 #df = pd.read_csv('CoSPAD_V3.csv')#.set_index('id')
-
+st.set_page_config(
+    page_title="Search",
+    page_icon="book",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 col1, col2 = st.columns([1, 1])
 
