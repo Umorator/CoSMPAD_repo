@@ -35,9 +35,9 @@ a.columns = ['Species','Values']
 st.title('Statistics')
 col1, col2= st.columns([1,1])
 
-fig = px.pie(a, values='Values', names='Species', title='Species Distribution', use_container_width=True)
+fig = px.pie(a, values='Values', names='Species', title='Species Distribution')
 fig.update_traces(textposition='inside')
-col1.plotly_chart(fig)
+col1.plotly_chart(fig, use_container_width=True)
 
 
 #SP type distribution ------------------------------------
@@ -45,10 +45,10 @@ col1.plotly_chart(fig)
 d = pd.DataFrame(df['SP type'].value_counts()).reset_index()
 d.columns = ['SP type','Values']
 
-fig4 = px.pie(d, values='Values', names='SP type', title='SP type Distribution', use_container_width=True)
+fig4 = px.pie(d, values='Values', names='SP type', title='SP type Distribution')
 fig4.update_traces(textposition='inside')
 
-col2.plotly_chart(fig4)
+col2.plotly_chart(fig4, use_container_width=True)
 
 #Protein distribution ------------------------------------
 col1, col2= st.columns([1,1])
@@ -56,19 +56,19 @@ col1, col2= st.columns([1,1])
 b = pd.DataFrame(df['Protein name'].value_counts()).reset_index()
 b.columns = ['Proteins','Values']
 
-fig2 = px.pie(b, values='Values', names='Proteins', title='Proteins Distribution', use_container_width=True)
+fig2 = px.pie(b, values='Values', names='Proteins', title='Proteins Distribution')
 fig2.update_traces(textposition='inside')
 
-col1.plotly_chart(fig2)
+col1.plotly_chart(fig2, use_container_width=True)
 
 #Promoter distribution ------------------------------------
 
 c = pd.DataFrame(df['Promoter'].value_counts()).reset_index()
 c.columns = ['Promoter','Values']
 
-fig3 = px.pie(c, values='Values', names='Promoter', title='Promoter Distribution', use_container_width=True)
+fig3 = px.pie(c, values='Values', names='Promoter', title='Promoter Distribution')
 fig3.update_traces(textposition='inside')
-col2.plotly_chart(fig3)
+col2.plotly_chart(fig3, use_container_width=True)
 
 
 
