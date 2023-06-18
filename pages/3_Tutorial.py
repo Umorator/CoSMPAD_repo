@@ -13,5 +13,5 @@ st.title('Tutorial')
 
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
-col2.image("CoMSPAD_tutorial.jpg")
+col2.image("CoSMPAD_vertical.png")
 
