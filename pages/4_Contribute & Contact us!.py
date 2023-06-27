@@ -49,5 +49,32 @@ with col3:
     st.markdown('<a href="https://rumo.biologie.hu-berlin.de/tbp/index.php/en//"> <i class="material-icons" style="font-size: 1.6em;">👩‍🏫</a>',unsafe_allow_html=True)
     #st.write("Our Group")
 
+footer="""<style>
+a:link , a:visited{
+color: blue;
+background-color: transparent;
+text-decoration: underline;
+}
 
+a:hover,  a:active {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: white;
+color: black;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Developed by Theoretical biophysics group - Humboldt-Universität zu Berlin</a></p>
+</div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
 
