@@ -73,8 +73,9 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>Developed by Theoretical biophysics group - Humboldt-Universität zu Berlin</a></p>
+<p><p>Humboldt-Universität zu Berlin, Institute of Biology,
+Theoretical Biophysics, 10099 Berlin, Germany <a  <a style='display: block;
+ text-align: center;' href="https://www.hu-berlin.de/en/hu-en/imprint/data-protection-statement" target="_blank">Data Privacy Statement</a></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
-
