@@ -24,8 +24,12 @@ col1, col2, col3 = st.columns([0.5, 3, 0.5])
 col2.image("abstract.png")
 
 st.title("About")
-st.write("CoSMPAD encompasses more than 20 types of experimental information found for 45 proteins by using different signal peptides. It aims to serve as a reference for the recombinant protein research community, and could also be used to make predictive models by analysing the impact of these factors on protein secretion.")
-
+st.write('''CoSMPAD encompasses more than 20 types of experimental information previously
+ reported for 45 proteins that were secreted using different signal peptides.
+   CoSMPAD aims to serve as a reference for the recombinant protein research community,
+     and can also be used to make predictive models by analysing the impact of different
+       determinants on the expression of secreted proteins.
+''')
 
 #Species distribution -----------------------------------
 st.title('Statistics')
@@ -46,7 +50,7 @@ col1, col2, col3 = st.columns([0.3, 1, 0.3])
 b = pd.DataFrame(df['Protein name'].value_counts()).reset_index()
 b.columns = ['Proteins','Values']
 
-fig2 = px.pie(b, values='Values', names='Proteins', title='Proteins Distribution')
+fig2 = px.pie(b, values='Values', names='Proteins', title='Protein Distribution')
 fig2.update_traces(textposition='inside')
 
 col2.plotly_chart(fig2)
