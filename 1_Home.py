@@ -7,7 +7,7 @@ import plotly.express as px
 
 #path = '/home/rafael/SP_Database/CoSPAD_repo/'
 
-df = pd.read_csv('CoSPAD_V3.csv')#.set_index('id')
+df = pd.read_csv('CoSMPAD.csv')#.set_index('id')
 
 
 st.set_page_config(
