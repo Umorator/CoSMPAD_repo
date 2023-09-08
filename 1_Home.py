@@ -21,10 +21,10 @@ st.set_page_config(
 
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
-col2.image("Fig_1_Abstract.tif")
+col2.image("graphical_abstract.png")
 
 st.title("About")
-st.write("CoSMPAD encompasses more than 20 types of experimental information found for 45 proteins by using different signal peptides. It aims to serve as a reference for the recombinant protein research community, and could also be used to make predictive models by analysing the impact of these factors on protein secretion.")
+st.write("About CoSMPAD encompasses more than 20 types of experimental information previously reported for 50 proteins that were secreted using different signal peptides. CoSMPAD aims to serve as a reference for the recombinant protein research community, and can also be used to make predictive models by analysing the impact of different determinants on the expression of secreted proteins.")
 
 
 #Species distribution -----------------------------------
