@@ -21,7 +21,7 @@ st.set_page_config(
 
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
-col2.image("abstract.png")
+col2.image("Fig_1_Abstract.tif")
 
 st.title("About")
 st.write("CoSMPAD encompasses more than 20 types of experimental information found for 45 proteins by using different signal peptides. It aims to serve as a reference for the recombinant protein research community, and could also be used to make predictive models by analysing the impact of these factors on protein secretion.")
