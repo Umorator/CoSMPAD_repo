@@ -1,4 +1,4 @@
-# CoMSPAD_repo
+# CoSMPAD_repo
 
 CoSMPAD: Comparative Secretory Microbial Preprotein Activity Database
 Written by Rafael Moran - 2023
