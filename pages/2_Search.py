@@ -67,7 +67,7 @@ def filter_dataframe(df):
                 str(len(df['Promoter'].unique())) + ' Promoter(s).')
         data_as_csv= df.to_csv(index=False).encode("utf-8")
         col1, col2 = st.columns([1, 1])
-        col1.download_button(label="Download data as CSV",data=data_as_csv,file_name='CoSMPAD_Result.csv',mime='text/csv',)
+        #col1.download_button(label="Download data as CSV",data=data_as_csv,file_name='CoSMPAD_Result.csv',mime='text/csv',)
         if col2.button('Display Dataframe'):
             st.dataframe(df)
 
