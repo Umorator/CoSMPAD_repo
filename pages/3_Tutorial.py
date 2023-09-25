@@ -13,7 +13,7 @@ st.title('Tutorial')
 
 col1, col2, col3 = st.columns([0.5, 3, 0.5])
 
-col2.image("tutotial_2_vertical.png")
+col2.image("Fig_2_Tutorial.png")
 
 footer="""<style>
 a:link , a:visited{
