@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pathlib
-import os
-import webbrowser
+
 
 
 st.set_page_config(
@@ -22,7 +20,7 @@ your data via email in the specified format. An example is given in the template
 ''')
 
 
-df = pd.read_csv('Template.csv')
+df = pd.read_csv('Template.csv', encoding='unicode_escape')
 data_as_csv= df.to_csv(index=False).encode("utf-8")
 
 st.download_button(label="Download Template",data=data_as_csv,file_name='Template.csv',mime='text/csv',)
