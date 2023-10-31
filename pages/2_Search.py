@@ -1,14 +1,8 @@
-
-
 import pandas as pd
 import streamlit as st
 import altair as alt
 from pandas.api.types import is_string_dtype
 
-
-
-#path = '/home/rafael/SP_Database/CoSPAD_repo/'
-#df = pd.read_csv('CoSPAD_V3.csv')#.set_index('id')
 st.set_page_config(
     page_title="Search",
     page_icon="book",
@@ -20,7 +14,6 @@ col1, col2 = st.columns([1, 1])
 
 
 col1.title("Search")
-#col2.image("/home/rafael/Pictures/theoretical bioph group-1.jpg",width=400)
 
 
 def plot(df,column):
@@ -77,10 +70,6 @@ def filter_dataframe(df):
            
                 
     return df
-
-
-
-#st.dataframe(filter_dataframe(pd.read_csv('CoSPAD_V3.csv')))
 
 filter_dataframe(pd.read_csv('CoSMPAD.csv'))
 
