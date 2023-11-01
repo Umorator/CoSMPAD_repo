@@ -1,4 +1,6 @@
 import streamlit as st
+import os
+import base64
 
 
 st.title("Imprint")
@@ -6,23 +8,29 @@ st.write('Humboldt-Universität zu Berlin, Institute of Biology, Theoretical Bio
 st.write('Prof. Dr. Edda Klipp - edda.klipp@hu-berlin.de, M.Sc. Rafael Moran - morantor@hu-berlin.de')
 
 
-col1, col3, col4 = st.columns([1, 0.5, 1])
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def get_img_with_href(local_img_path, target_url):
+    img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
+    bin_str = get_base64_of_bin_file(local_img_path)
+    html_code = f'''
+        <a href="{target_url}">
+            <img src="data:image/{img_format};base64,{bin_str}" width="110" height="110" border="0"/>
+        </a>'''
+    return html_code
+
+col1, col2, col3, col4, col5 = st.columns([1, 0.5,0.5, 0.5, 1])
+
+hu_berlin_html = get_img_with_href('Huberlin-logo.png', 'https://www.hu-berlin.de/de')
+tbp_html = get_img_with_href('TBP_logo.png', 'https://rumo.biologie.hu-berlin.de/tbp/index.php/en//')
 
 
-#col2.markdown('''
-#    <a href="https://rumo.biologie.hu-berlin.de/tbp/index.php/en//">
-#        <img src="https://ibin.co/7RXg5krCOXmy.jpg" width="105" height="80" border="0" />
-#    </a>''',
-#    unsafe_allow_html=True
-#)
+col2.markdown(tbp_html, unsafe_allow_html=True)
 
-
-col3.markdown('''
-    <a href="https://www.hu-berlin.de/de">
-        <img src="https://www.ipsa.org/sites/default/files/news-announcements/event/image-144660.png" width="150" height="100" border="0" />
-    </a>''',
-    unsafe_allow_html=True
-)
+col4.markdown(hu_berlin_html, unsafe_allow_html=True)
 
 
 footer="""<style>
